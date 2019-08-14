@@ -9,7 +9,6 @@ import java.util.List;
  * DAO模式
  *  * Database Access Object
  *  * dao下所有的类只有一个职责操作数据库,这里面不涉及任何业务
- *  *
  *  * 一个DAO类只操作一张表
  * */
 public class CourseDAOtest {
