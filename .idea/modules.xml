@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/day001_JDBCdemo1/day001_JDBCdemo1.iml" filepath="$PROJECT_DIR$/day001_JDBCdemo1/day001_JDBCdemo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day002/day002.iml" filepath="$PROJECT_DIR$/day002/day002.iml" />
     </modules>
   </component>
 </project>

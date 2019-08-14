@@ -17,7 +17,7 @@ public class demo1 {
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/zsdemo?useUnicode=true&characterEncoding=utf-8","root","root");
             //2.从连接中获取sql语句执行的对象
             sta = conn.createStatement();
-            //3.定义一条sql
+            //3.定义一条sqla
             String sql = "insert into t1(score) values(60)";
             //4.执行sql语句得到结果
             /*此时的updata不是指的数据库中的update语句，而是指的是能改变数据的语句*/
