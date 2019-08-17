@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+.利用接口代理***
+		1.创建一个接口,接口名与xml一样,接口与xml放在一起
+		2.在接口中定义抽象方法
+			返回值就写你想要的
+			方法名就是xml中语句的id
+			xml中namespace的值是接口的全路径
+		3.使用getMapper方法生成接口对象
+-->
+<!-- namespace给一个命名空间-->
+<mapper namespace="com.zs.mapper.CourseMapper">
+    <!-- resultType是告诉mybatis，我这个语句查询要封装成哪个类-->
+    <select id="listCourse" resultType="Course">
+      select * from Course;
+    </select>
+
+    <!--增加-->
+    <insert id="saveCourse">
+        insert into course values(#{cno},#{cname},#{credit},#{semester})
+    </insert>
+
+    <!-- 删除 -->
+    <delete id="deleteCourse">
+        delete from course where Cno = 'c010';
+    </delete>
+
+    <!-- 修改 -->
+    <update id="updateCourse">
+        update course set Cno = 'C008' where Cno='c008'
+    </update>
+</mapper>

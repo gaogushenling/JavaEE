@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace给一个命名空间-->
+<mapper namespace="com.zs.mapper.EmpMapper">
+    <!--id 里写的是命名，type是给Emp写映射-->
+    <resultMap id="empMap" type="Emp">
+        <id column="emp_id" property="empId"></id>
+        <result column="name" property="name"></result>
+        <result column="dept_id" property="deptId"></result>
+
+    </resultMap>
+
+    <!-- resultType是告诉mybatis，我这个语句查询要封装成哪个类            ！！！！！！！！！！！！！！！！1resultMap里写上边命名的id-->
+    <select id="listEmp" resultMap="empMap">
+      select * from Emp;
+    </select>
+
+</mapper>

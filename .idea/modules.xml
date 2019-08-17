@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/day001_JDBCdemo1/day001_JDBCdemo1.iml" filepath="$PROJECT_DIR$/day001_JDBCdemo1/day001_JDBCdemo1.iml" />
       <module fileurl="file://$PROJECT_DIR$/day002/day002.iml" filepath="$PROJECT_DIR$/day002/day002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day003_mybatisdemo/day003_mybatisdemo.iml" filepath="$PROJECT_DIR$/day003_mybatisdemo/day003_mybatisdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day003_mybatisdemo2/day003_mybatisdemo2.iml" filepath="$PROJECT_DIR$/day003_mybatisdemo2/day003_mybatisdemo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day003_mybatisdemo3/day003_mybatisdemo3.iml" filepath="$PROJECT_DIR$/day003_mybatisdemo3/day003_mybatisdemo3.iml" />
     </modules>
   </component>
 </project>
