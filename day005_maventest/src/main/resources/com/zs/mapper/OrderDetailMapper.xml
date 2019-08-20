@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace给一个命名空间-->
+<mapper namespace="com.zs.mapper.OrderDetailMapper">
+
+    <resultMap id="detailMap" type="OrderDetail">
+        <id column="detail_id" property="detailId"></id>
+        <result column="order_id" property="orderId"></result>
+        <result column="goods_id" property="goodsId"></result>
+        <result column="count" property="count"></result>
+
+    </resultMap>
+
+    <!--根据订单id查看所有详情-->
+    <select id="listDetailByOrderId" resultMap="detailMap">
+        select <include refid="allColumn"></include> from s_order_detail where order_id = #{orderId}
+    </select>
+
+    <!--根据订单id删除详情-->
+    <delete id="deleteDetail">
+        delete from s_order_detail where order_id = #{orderId}
+    </delete>
+    <!--根据订单id和详情id修改-->
+    <update id="updateDetailBygoodsId">
+        update s_order_detail set goods_id = #{goodsId} where order_id = #{orderId} and detail_id = #{detailId}
+    </update>
+    <!--增加订单详情-->
+    <insert id="addDetail">
+        insert into s_order_detail value (#{detailId},#{orderId},#{goodsId},#{count})
+    </insert>
+    <!--转储sql--><!--写sql语句尽量不要写*，会导致速度慢，因为*是查询两次-->
+    <sql id="allColumn">
+        detail_id,order_id,goods_id,count
+    </sql>
+
+</mapper>

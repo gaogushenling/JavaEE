@@ -1,13 +1,9 @@
 package com.zs.test;
 
-import com.zs.entity.Order;
 import com.zs.mapper.OrderMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-
-import java.util.Random;
-import java.util.UUID;
 
 public class OrderMapperTest {
     public static void main(String[] args) {
